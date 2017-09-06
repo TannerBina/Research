@@ -1,0 +1,262 @@
+%These are just the filler ones. Need to transfer all the papers we've read to this.
+
+@article{bbTardyMachine,
+  author =       "Ghaith Rabadi and Mansooreh Mollaghasemi and Georgios Anagnostopoulos",
+  title =        "A branch-and-bound algorithm for the early/tardy machine scheduling problem with a common due-date and sequence-dependent setup time",
+  journal =      "Computers & Operations Research",
+  volume =       "31",
+  number =       "10",
+  pages =        "1727--1751",
+  year =         "2004",
+  DOI = "10.1016/S0305-0548(03)00117-5"
+}
+
+The main take away from this paper is it talks about branch and bound algorithms for these problems. It gave us the idea to start assigning at the end instead of the start of the problem for branch and bound. Also it gave us some idea for the upper bound to use a greedy + optimization. Does a decent job, helped with branch and bound.
+
+@article{branchBoundTSP,
+    author = "Jens Cluasen",
+    title = "Branch and bound algorithms-principles and examples.",
+    journal = "Department of Computer Science, University of Copenhagen",
+    year = "1999"
+}
+Goes over tsp branch and bound.
+
+@article{dcClusteringMillionTSP,
+    author =    "Samuel Mulder, Donald Wunsch II",
+    title =     "Million city traveling salesman problem slution by divide and conquer clustering with adaptive resonance neural networks",
+    journal =   "Neural Networks",
+    volume = "16",
+    pages = "827--832",
+    year = "2003",
+    DOI = "10.1016/S0893-6080(03)00130-8"
+}
+
+I did not really understand what they used for clustering, however they did a similar idea to what we are thinking. Their main goal was to do Lin-Kernighan faster for huge instances. Should look back through for ideas about how to hand crossover between clusters.
+
+@article{clusteringAlgorithms,
+    author = "Rui Xu and Donald Wunsch II",
+    title = "Survey of Clustering Algorithms",
+    journal = "IEEE Transactions on Neural Networks",
+    volume = "16",
+    number = "3",
+    year = "2005",
+    DOI = "10.1109/TNN.2005.845141",
+}
+
+Pretty much a really in depth review of a ton of different clustering algorithms. Really good to read and look back at any time we are looking for new clustering algorithms and trying to figure out what we should use for clustering.
+
+@article {tspGenerateOptimal,
+    author = "Jeffrey Arthur and James Frendewey",
+    title = "Generating Travelling-Salesman Problems with Known Optimal Tours",
+    journal = "The Journal of the Operationl Research Society",
+    volume = "39",
+    number = "2",
+    pages = "153--159",
+    year = "1988",
+    DOI = "10.2307/2582378"
+}
+
+Didn't seem to be a great paper. Don't know linear programming and thats most of what it is based on. However, did give helpful tips on maybe generating optimal. They do it by relaxing the tsp (I believe maybe 2-mintree) relaxation and then making that the tour. We coud do this, however, any heuristic or bb algorithm that uses this lower bound would immediately find this. That would be a big problem, however, it would be something at least.
+
+@article {pVsNp,
+    author = "Stephen Cook",
+    title = "The P versus NP problem",
+}
+ We need to fill in the rest of the info for this. I dont know where the info actually is though. All the paper says but well known. Just used for p and np statement
+
+@article {lkHeuristic,
+    author = "S. Lin and B. W. Kernighan",
+    title = "An Effective Heuristic Algorithm for the Traveling-Salesman Problem",
+    journal = "Operations Research",
+    volume = "21",
+    number = "2",
+    pages = "498--516",
+    year = "1973"
+}
+
+The basic lk paper. Havent read deeply but pretty much every tsp paper references it and have a good idea of how it works.
+
+@article {tspHistory,
+    author = "M. Held, A. J. Hoffman, E. L. Johnson, and P. Wolfe",
+    title = "Aspects of the traveling salesman problem",
+    journal = "IBM Journal of Research and Development",
+    volume = "28",
+    number = "4",
+    pages = "476--486",
+    year = "1984"
+}
+
+Just talks about formulation of the problem a bit.
+
+@article {bbAlgorithmsGeneral,
+    author = "Jens Clausen",
+    title = "Branch and Bound Algorithms - Principles and Examples",
+    school = "Department of Computer Science, University of Copenhagen",
+    year = "1999"
+}
+
+Covers branch and bound strategies pretty in depth and understandably, incluing bounding function, branchin strategy, and upper bound initial solution.
+
+@article {tspOptimalGenerator,
+    author = "Jeffrey L. Arhtur and James O. Frendewey",
+    title = "Generating Travelling-Salesman Problems with Known Optimal Tours",
+    journal = "The Journal of the Operaional Research Society",
+    volume = "39",
+    number = "2",
+    year = "1988",
+    pages = "153--159"
+}
+
+Generates distance matrix for tsp with known optimal solution. Seems pretty easy how they do it. But it generates distance matrix, not a plane. Has a small section on generating on a plane but isnt very helpful. Need to know a bit more linear programming to fully understand.
+
+@article{tdtspOptimalGenerator,
+    author = "Russ J. Vander Wiel and Nikolaos V. Sahinidis",
+    title = "Heuristic Bounds and Test Problem Generation for the Time-Dependent Traveling Salesman Problem",
+    journal = "Transportation Science",
+    volume = "29",
+    number = "2",
+    pages = "167--183",
+    year = "1995"
+}
+
+They cover a lot of stuff in this paper. The heuristics ma be interesting at a later time but not important now. We used their linear programming definition as a basis for ours sort of. They generate a tdtsp optiaml instance. That generation problem could be very similar to what we want to use but they only use distance matrix once again.
+
+@article{tdtspDefinition,
+    author = "Chryssi Malandraki and Mark S. Daskin",
+    title = "Time Dependent Vehicle Routing Problems : Formlations, Properties and Heuristic Algorithms",
+    journal = "Transportation Science",
+    volume = "26",
+    number = "3",
+    pages = "185--200",
+    year = "1992"
+}
+
+Talks about the time dependent traveling salesman problem. They use a step function like we do. Ours however is always increasing while theres could be either way. Ours is a subproblem of the TDTSP as they define it here. Should be used when talking about our problem. They talk about some simple heursitic algorithms but only test it on small problems. Can read some more about for related works to get results in other areas of the problem. Pretty much can talk about how our restriction that it is uniformly increasing times allows us to tackle much larger problems.
+
+@article{tspAlgorithms,
+    author = "Gilber Laporte",
+    title = "The Traveling Salesman Problem: An overview of exact and approximate algorithms",
+    journal = "European Journal of Operational Research",
+    volume = "59",
+    pages = "231--247",
+    year = "1992",
+}
+
+This is a really nice article that goes over a ton of approximation and exact algorithms for the tsp. Should definetly be referenced in related works when talking about approximation algorithms and the basic tsp. Also talks about the applicatins of the tsp. Also has linear programming definitions if we want to look at those to help us with ours. Talks about branch and bound algorithms based on relaxations for lower bound. Also we should look at the assignment problem. Also big section on optimization of traveling salesman tours. If we can use these in ours it could improve performance. But we should worry about getting initial results before we work on improving. 
+
+@article{approximateTSP,
+    author = "B. Golden, L. Bodin, T. Doyle and W. Stweart Jr.",
+    title = "Approximate Traveling Salesman Algorithms",
+    journal = "Operations Research",
+    volume = "28",
+    number = "3",
+    pages = "694--711",
+    year = "1980"
+}
+
+Pretty much talks about a lot of heuristic algorithms for the tsp. It talks about the strengths and weaknesses of each approximation algorithm. Then it concludes by pretty much showing that its not hard to get within 2 to 3 percent optimallity for a tsp instance in n^3 time. Goes over the three main type of heuristics, construction, improvement and composite. We use a composite one. This paper doesnt do huge problems though. Really seems to use 100 point problems which is still pretty small. Nicely written and easy to read though for general knowledge of approximate solutions so far. We can also use this for talking about our optimization methods.
+
+@article{dpTDTSP,
+    author = "Chryssi Malandraki and Robert B. Dial",
+    title = "A restricted dynamic programming heuristic algorithm for the time dependent traveling salesman problem",
+    journal = "European Journal of Operational Research",
+    volume = "90",
+    number = "1",
+    pages = "45--55",
+    year = "1996"
+}
+
+Gives a dynamic programming algorithm for the tdtsp. Just an interesting approximation algorithm for solving the tdtsp. It retains a specified number of tours throughout and only keeps these to build onto. Uses a greedy nearest neighbor approach for building (sort of a nearest n neighbors approach). Only used on up to 55 nodes. Havent seen large tdtsp yet, can talk about this. Compares results to itelf but with higher number of partial tours stored. Interesting way to do it?? Took a long time to approximate.
+
+@book{tspAll,
+    author = "Gregory Gutin and Abraham P. Punnen",
+    title = "The Traveling Salesman Problem and Its Variations",
+    year = "2007",
+    publisher = "Combinatorial Optimization"
+}
+
+Basic tsp overview
+
+@conference{GAclusterTSP,
+    author = "Ugur Cekmez and Ozgur Koray Sahingoz",
+    title = "Parallel solution of large scale Traveling Salesman Problems by using clustering and Evolutionary Algorithms",
+    organization = "2016 24th Signal Processing and Communication Application Conference",
+    year = "2016",
+    publisher = "IEEE"
+}
+    
+Uses K means to cluster a tsp problem. Then recombines the seperate results to get the final tour. I don't have access to the paper, so cant really say much about it. Can try to get access if we need to.
+
+@conference{GAclusterTSP2,
+    author = "Lizhuang Tan, anyan Tan, Guoxiao Yun, and Yanna Wu",
+    title = "Genetic algorithms based on clustering for traveling salesman problems",
+    organization = "2016 12th Internation Conference on Natural Computation, Fuzzy Systems and Knowledge Discovery",
+    year = "2016",
+    publisher = "IEEE"
+}
+
+Once again can only access the abstract. Divides the tsp into sub problems using k means and something called affinity propagation. These are then solved and they reconnect them to find the result.
+
+@conference{GAclusterTSP3,
+    author = "Khalid Jebari, Abdelaziz El Moujahid, Abdelaziz Bouroumi and Aziz Ettouhami",
+    title = "Unsupervised fuzzy clustering-based genetic algorithms to Traveling Salesman Problem",
+    organization = "2012 International Conference on Multimedia Computing and Systems",
+    year = "2012",
+    publisher = "IEEE"
+}
+
+Once again can only acess the abstract. Similar thing, divide into subtours, solve smaller subtoures, connect them back together. 
+
+Honestly I can not tell if these three papers are legit. They do not seem to be very good but they are all i can find using clustering on the tsp so far which we are definetly going to need to reference. 
+    
+@conference{tspLargeClustering,
+    author = "Jin-Qui Yang, Jian-Gang Yang, and Gen-Lang Chen",
+    title = "Solving Large-Scale TSP Using Adaptive Clustering Method",
+    organization = "Second International Symposium on Computational Intelligence and Design",
+    year = "2009",
+    publisher = "IEEE"
+}
+
+They pretty much are breaking it down like we do into smaller problems then combining these solutions to create a larger problem. Uses a concept of relativity based on distance between and number of near neighbors to cluster things together. Sort of a cool idea. Tried something similar, didnt work as well. THE SAME EXACT THING FOR CENTER IS USED. THIS PAPER IDEA IN THE PAPER IS VERY SIMILAR TO OURS BUT NOT OUR PROBLEM. Use genetic algorithms to find subtours and tours. 
+
+@article {TravelingMST,
+    author = "Michael Held and Richard M. Karp",
+    title = "The Traveling-Salesman Problem and Minimum Spanning Trees",
+    year = "1969"
+}
+Original references for Branch & Bound with MST for basic TSP
+
+@article{ImproveBranch&Bound,
+    author = "Torsten Fahle",
+    title = "Simple and Fast: Improving a Branch And Bound Algorithm for Maximum Clique",
+    school = "Department of Mathematics and Computer Science Paderborn,Germany"
+}
+
+This paper looks at cost based filtering techniques for maximum clique. Useful for looking at basic upper bound algorithms as well as computational complexity.
+
+@article{infrastructureTSP,
+    author = "Michaael Hahsler and Kurt Hornik",
+    title = "Infrastructure for the Traveling Salesperson Problem",
+    school = "Southern Methodist University and Wirschaftsuniversität Wien"
+    
+}    
+an approach using R to solve the basic TSP problem using a new interface called Concorde. essentially just another paper with gen info on solving the general TSP problem.
+
+@MISC{branch&boundBasics,
+    author = {Jens Clausen},
+    title = {Branch and Bound Algorithms -- Principles And Examples},
+    year = {1999}
+}
+a long read that goes through the basic terminology and algorithms for branch and bound in general, a great read that helps the reader grasp the basics of branch and bound.
+
+@article{Linkernighancluster,
+    author = "Keld Helsgaun",
+    title = "Solving the Clustered Traveling Salesman Problem Using the Lin-Kernighan-Helsgaun Algorithm",
+    school = "Roskilde University",
+    year ="2014"
+}
+Paper addressing clustering over large scale instances of the tsp problem using the LKH algorithm. LKH is used as a black box to solve clustered tsp problems. pretty trivial but great explanations.
+
+
+
+
